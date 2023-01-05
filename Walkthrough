@@ -1,0 +1,29 @@
+** Summary ** 
+I took the raw data and imported it into  an excel sheet. The first tab shows what the data looked like when I imported the data initially. I began to clean the data and reformat it. My goal with this project was to ensure the car inventory is clear and concise. Below you will see the steps taken and a some questions that were answered. 
+
+** Task:**  reformat data, calculate the age of the car, miles per year, determine if the vehicle is covered under warranty, I created a new column reflecting how may warranty miles left and rounded up with creating a New Car ID.
+
+** How I completed the assignment: **
+Pre work:I separated Characters from the Car ID field by using '=left(B2,2)'
+
+- Step 1: I created a look up table , and placed them in Chronological order to identify vehicle
+I used the Lookup function to use the abbreviated Make to create the Make's Full name by using VLOOKUP(B2,C56:D61,2). I entered the Command, the field I am trying to define, the lookup table and then the row number the abbreviated Make is in the lookup table. In order for the remainder of the rows to fill I used Absolute references because you will receive an error otherwise. So the proper formula should be VLOOKUP(B2,C$56:D$61,2)
+
+- Step 2: For Column E- we would do it the same as C. You can Copy and paste the formula 
+
+- Step 3: Column F- I ran the mid formula- mid (A2,3,2) this means use data in field A2, enter the number where the value you need starts and we only want two digits
+
+- Step 4: Column G is simply =23 (year)- Column F. When presented with a negative #. Use the if formula. If(23-f2<0, 100-f2+23, 23-f2) . This means is the car's age is a negative number then use 100-F2(car's age)+23 (current Year). 
+
+- Step 5: Column I- H2/(G2+.5) was used to calculate the vehicle's age. I used the current year 2023 minus the age provided in the initial Car ID.
+
+- Column N: confirmation if the warranty is covered or not? I used the IF formula again =IF(H2<=L2, "Y", "Not Covered"
+
+- Column O: I used the Concatenate formula CONCATENATE(B2,F2,D2,LEFT(J2,3),RIGHT(A2,3))  
+
+To change letters from lower case to upper case, type the word "upper" where you want to change it to CONCATENATE(B2,F2,D2,upper LEFT(J2,3),RIGHT(A2,3)) 
+
+** Questions to answer: **
+- Who has the greatest amount of miles?- located in Most miles Tab
+- What Make is driven more?
+- Which make is more durable based on age and miles?- Scatter plot
