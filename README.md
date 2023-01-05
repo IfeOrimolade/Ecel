@@ -8,7 +8,7 @@ Practice and brush up on excel skills
 - Pivot Tables
 - Charts
 - Formulas to split cells = Left = MID=RIGHT!
-**Contact Information**
 
-Ife.orimolade@yahoo.com
-linkedin.com/in/iorimolade
+**Contact Information**
+- Ife.orimolade@yahoo.com
+- linkedin.com/in/iorimolade
